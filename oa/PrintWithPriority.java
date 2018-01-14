@@ -9,18 +9,6 @@ import java.util.PriorityQueue;
 
 public abstract class PrintWithPriority {
     public static void main(String[] args) {
-
-
-
-        PriorityQueue<skill> res = new PriorityQueue<skill>(new Comparator<skill>(){
-        	@Override
-        	public int compare(skill a, skill b){
-        		return -a.priority+b.priority;
-        	}
-        });
-        
-        
-
         printTop(4);
 //        
 //            new Comparator<skill>(){

@@ -1,8 +1,5 @@
 package oa;
 
-import java.util.PriorityQueue;
-import java.util.Queue;
-
 public class MoodysMaxofMin {
 
 	public static void main(String[] args) {

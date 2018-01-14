@@ -1,7 +1,5 @@
 package oa;
 
-import java.util.Arrays;
-
 public class FetchrStockProfit {
 
 	//股票买卖。可以同时持有多只股票

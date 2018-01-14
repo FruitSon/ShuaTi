@@ -17,7 +17,6 @@ import java.util.TreeMap;
 
 public class solution {
 public static void main(String[] args) {
-	        System.out.println("Hello World!");
 //	        String[][] input = {{"job1","job2"},{"job1","job3"},{"job4","job3"},{"job1","job5"},{"job6","job1"}};
 //	        String[][] input = {{"clean", "build"},{"metadata", "binary"},{"build", "link"},{"link", "binary"},
 //	        {"clean", "metadata"},{"build", "resources"}};
@@ -26,7 +25,6 @@ public static void main(String[] args) {
 	        		{"stir", "boil"},
 	        		{"set table", "serve"}};
 	        Arrays.sort(input,(o1,o2)->o1[0].compareTo(o2[0]));		
-	        Stack<String> stack = new Stack<>();
 	        Map<String,Integer> degree = new HashMap<>();
 	        Map<String,Integer> order = new TreeMap<>();
 	        Map<String,List<String>> adj = new HashMap<>(); 
@@ -181,7 +179,6 @@ abstract class Graph<T>{
 	protected int size = 0;
 	public Set<Vertex<T>> vertices;
 	public Set<Edge<T>> edges;
-	private int time;
 	private Stack<Vertex<T>> topoStack;
 	
 	public Graph(){

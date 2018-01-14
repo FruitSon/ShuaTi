@@ -6,7 +6,6 @@ import java.util.List;
 public class lc126 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		String beginWord = "hit", endWord = "cog";
 		List<String> wordList = new LinkedList<>();
 		wordList.add("hot");
@@ -40,16 +39,16 @@ public class lc126 {
 	        if(curWord.equals(endWord)){
 	        	System.out.println(tmp.size());
 	            if(res.size()==0){
-	                res.add(new LinkedList(tmp));
+	                res.add(new LinkedList<String>(tmp));
 	                return;
 	            }else{
 	                int pre_size = res.get(0).size(),cur_size = tmp.size();
 	                if(pre_size==cur_size){
-	                    res.add(new LinkedList(tmp));
+	                    res.add(new LinkedList<String>(tmp));
 	                }else if(pre_size<cur_size) return;
 	                else{
 	                    res.clear();
-	                    res.add(new LinkedList(tmp));
+	                    res.add(new LinkedList<String>(tmp));
 	                }
 	            }
 	        }

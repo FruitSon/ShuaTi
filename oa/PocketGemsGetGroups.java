@@ -6,8 +6,6 @@ public class PocketGemsGetGroups {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[][] temp = new int[2][2];
-
 		String[] operation = new String[]{"Friend","Friend","Total"};
 		int[] std1 = new int[]{4,2,2};
 		int[] std2 = new int[]{1,4,3};
@@ -47,7 +45,6 @@ public class PocketGemsGetGroups {
 	}
 	
 	private static int total(int[] status, int[] cnt, int a, int b){
-		int res = 0;
 		int i = find(status,a);
 		int j = find(status,b);
 		if(i==j) return cnt[i];

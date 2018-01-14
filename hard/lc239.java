@@ -8,7 +8,6 @@ public class lc239 {
 		maxSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7},3);
 		maxSlidingWindow(new int[]{1,3,-1,-3,5,3,6,7},1);
 		maxSlidingWindow(new int[]{1,3,-1},2);
-
 	}
 
 	static class Pair{
@@ -45,7 +44,7 @@ public class lc239 {
                 res[i-k+1] = pq.peek().val;
             }
             Pair tar = new Pair(nums[i-k+1],i-k+1);
-            pq.remove(new Pair(nums[i-k+1],i-k+1)); 
+            pq.remove(tar); 
         }
         for(int i:res) System.out.print(i+" ");
         return res;

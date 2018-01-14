@@ -8,7 +8,7 @@ package normal;
 //	 [1,5,1],
 //	 [4,2,1]]
 //	Given the above grid map, return 7. Because the path 1→3→1→1→1 minimizes the sum.
-public class LC64_Minimum_Path_Sum {
+public class LC064_Minimum_Path_Sum {
 
 	//时间复杂度 O(M*N)
     public int minPathSum(int[][] grid) {

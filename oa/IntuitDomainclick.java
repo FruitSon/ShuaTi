@@ -2,8 +2,6 @@ package oa;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Set;
 
 public class IntuitDomainclick {
 
@@ -19,11 +17,8 @@ public class IntuitDomainclick {
 				return -a[0].split(".").length + b[0].split(".").length;
 			}
 		});
-		Set<String> visited = new HashSet<>();
-		for(int i = 0; i<input.length; i++){
-			String[] temp = input[0][0].split(".");
-//			dfs(temp,temp.length-1,i+1,visited);
-		}
+
+		//to be finished
 		return;
 	}
 

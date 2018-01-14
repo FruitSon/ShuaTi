@@ -12,7 +12,6 @@ public class IntuitLCS {
         
     public static void LCS(String[] u1, String[] u2){
         int n = u1.length, m = u2.length; 
-        int[][] f = new int[n+1][m+1];
         List<String> temp = new LinkedList<>();
         List<String> res = new LinkedList<>();
         for(int i = 1; i<n;i++){

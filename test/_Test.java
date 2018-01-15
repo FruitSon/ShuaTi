@@ -11,13 +11,14 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 import normal.*;
+import hard.*;
 
 @RunWith(Parameterized.class)
-public class Templates {
+public class _Test {
 
 	private LC231_Power_Of_Two test; 
 	
-	public Templates(){
+	public _Test(){
 	}
 	
 	@Before

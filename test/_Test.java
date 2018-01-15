@@ -31,7 +31,7 @@ public class _Test {
 		return Arrays.asList(new Object[][] {
 		});
 	}
-	
+	 
 	@Test
 	public void test() {
 		fail();

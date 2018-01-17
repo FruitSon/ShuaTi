@@ -1,5 +1,8 @@
 package hard;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /*
 In this problem, a rooted tree is a directed graph such that, there is exactly one node (the root) for which all other nodes are descendants of this node, plus every node has exactly one parent, except for the root node which has no parents.
 
@@ -152,4 +155,63 @@ public class LC685_Redundant_Connection_II {
         arr[find(arr,arr[child])]= find(arr,arr[parent]);
     }
     
+    //method 3
+    public int[] findRedundantDirectedConnection3(int[][] edges) {
+        if(edges == null || edges.length == 0) return new int[0];
+
+        /**
+         * case 1:
+         * check if exists circle (equivelent to if exists root node)
+         * if no root, every node has parent
+         **/
+
+        /**
+         * case 2:
+         * otherwise one node with two parents
+         */
+
+        //{{2,1},{3,1},{4,2},{1,4}}
+        //
+        int indexOfConflict = -1;
+        Map<Integer, Integer> childToParent = new HashMap<>();
+        for (int i = 0; i < edges.length; i++) {
+            Integer parent = edges[i][0];
+            Integer child = edges[i][1];
+            if(indexOfConflict == -1 && childToParent.containsKey(child)) {
+                indexOfConflict = i;
+              //1
+            }else
+                childToParent.put(child, parent);
+            
+          
+          
+            if(indexOfConflict == -1 && checkIfExistCircle(childToParent, child)) return edges[i];
+        }
+
+      
+      
+        if(indexOfConflict != -1) return deleteOneNotUsefulEdge(edges[indexOfConflict], childToParent);
+        return new int[0];
+
+
+    }
+
+    private int[] deleteOneNotUsefulEdge(final int[] edge, final Map<Integer, Integer> childToParent) {
+        Integer parent = edge[0];
+        Integer child = edge[1];
+        if(childToParent.containsKey(parent)) return edge;
+        else return new int[]{childToParent.get(child), child};
+    }
+    
+    private boolean checkIfExistCircle(final Map<Integer, Integer> map, final Integer child) {
+        int count = 0;
+        Integer node = child;
+        while(count <= map.size()) {
+            if(!map.containsKey(node)) break;
+            node = map.get(node);
+            count++;
+        }
+
+        return count == map.size() + 1;
+}
 }

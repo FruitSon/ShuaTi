@@ -32,27 +32,27 @@ public class LC685_Redundant_Connection_II_Test {
 	@Parameterized.Parameters
 	public static List<Object[]> testcase(){
 		return Arrays.asList(new Object[][] {
-			//duplicated parents, w/o cycle
+			//duplicated parents, w/o cycle -> return latter one of the candidates
 			{new int[][]{{1,2},{1,3},{2,3}}, new int[]{2,3}},
 			{new int[][]{{1,2},{2,3},{1,3},{3,5},{2,4}}, new int[]{1,3}},
 			{new int[][]{{5,2},{5,1},{3,1},{3,4},{3,5}}, new int[]{3,1}},
 			{new int[][]{{3,1},{3,4},{4,1},{4,2}}, new int[]{4,1}},
 			{new int[][]{{3,1},{4,1},{3,4},{4,2}}, new int[]{4,1}},
 
-			//duplicated parents, w cycle
+			//duplicated parents, w cycle -> return the candidate in the cycle
 			{new int[][]{{2,1},{3,1},{4,2},{1,4}}, new int[]{2,1}},
 			//	*the parent node can have more than 2 child
 			{new int[][]{{4,1},{1,5},{4,2},{5,1},{4,3}}, new int[]{5,1}},
 
-			//no duplicated parents, w cycle
+			//no duplicated parents, w cycle -> return the edge forms the cycle
 			{new int[][]{{1,2},{2,3},{3,4},{4,1},{1,5}}, new int[]{4,1}},
 		});
 	}
 	
 	@Test
 	public void test() {
-		assertArrayEquals(expectedResult,test.findRedundantDirectedConnection(input));
-		assertArrayEquals(expectedResult,test.findRedundantDirectedConnection2(input));
+//		assertArrayEquals(expectedResult,test.findRedundantDirectedConnection(input));
+		assertArrayEquals(expectedResult,test.findRedundantDirectedConnection3(input));
 	}
 
 }

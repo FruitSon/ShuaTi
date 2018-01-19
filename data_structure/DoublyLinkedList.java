@@ -33,7 +33,7 @@ public class DoublyLinkedList<T> {
     	return node.val;
     }
 
-    public T getLastVal() {
-        return tail.pre.val;
+    public DoublyLinkedListNode<T> getLast() {
+        return tail.pre;
     }
 }

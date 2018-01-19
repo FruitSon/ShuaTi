@@ -14,6 +14,8 @@ public class DoublyLinkedListNode<T> {
 		this.pre = null;
 		this.next = null;
 	}
-
-
+	
+	public T getVal(){
+		return val;
+	}
 }

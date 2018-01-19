@@ -41,59 +41,41 @@ public class LC236_Lowest_Common_Ancestor_of_a_Binary_Tree {
 		l21.right = l32;
 		l31.left = l41;
 		
-		String tr = null;
-		System.out.println(tr);
 		
-//		lowestCommonAncestor(l11,l32,l41);
+		lowestCommonAncestor(l11,l32,l41);
 	}
-    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if(root == null) return null;
-        TreeNode target = null;
-        countOfChild(root, p, q, target);
-        if(target == null) return root;
-        else return target;
-    }
-    private static int countOfChild(final TreeNode root, final TreeNode p, final TreeNode q, TreeNode target) {
-        if(target != null) return 0;
-        if(root == null) return 0;
-        int res = 0;
-        if(root == p || root == q) res++;
-        res += countOfChild(root.left, p, q, target);
-        res += countOfChild(root.right, p, q, target);
-        if(target == null && res == 2) target = root;
-        return res;
-    }
 
-//    static List<TreeNode> pPath,qPath;
-//    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-//        backtracking(root,p,q,new LinkedList<>());
-//        if(pPath==null || qPath==null) return null;
-//        for(int ppt = pPath.size()-1, qpt = qPath.size()-1; ppt >= 0 && qpt >= 0; ppt--,qpt--){
-//            if(pPath.get(ppt)!=pPath.get(qpt)) pPath.get(ppt+1);
-//        }
-//        return null;
-//        
+	//ITERATIVE METHOD
+	public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+		return null;
+	}
+
+// public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+//     if(root==null || root==p || root==q) return root;
+//     TreeNode left = lowestCommonAncestor(root.left,p,q);
+//     TreeNode right = lowestCommonAncestor(root.right,p,q);
+//     if(left==null && right == null) return null;
+//     if(left!=null && right != null) return root;
+//     if(left!=null) return left;
+//     return right;
+// }
+	
+// Nigel
+//    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+//        if(root == null) return null;
+//        TreeNode[] target = new TreeNode[]{null};
+//        countOfChild(root, p, q, target);
+//        if(target[0] == null) return root;
+//        else return target[0];
 //    }
-//    
-//    
-//    public static void backtracking(TreeNode root, TreeNode p, TreeNode q, List<TreeNode> path){
-//        if(root==null) return;
-//        if(pPath!=null && qPath!=null) return;
-//        if(root==p){
-//            path.add(p);
-//            pPath = new LinkedList<TreeNode>(path);
-//            path.remove(path.size()-1);
-//        }
-//        if(root==q){
-//            path.add(q);
-//            qPath = new LinkedList<TreeNode>(path);
-//            path.remove(path.size()-1);
-//        }
-//        
-//        path.add(root);
-//        backtracking(root.left,p,q,new LinkedList<>(path));
-//        backtracking(root.left,p,q,new LinkedList<>(path));
-//        path.remove(path.size()-1);
-//        return;
-//    }    
+//    private int countOfChild(final TreeNode root, final TreeNode p, final TreeNode q, TreeNode[] target) {
+//        if(target[0] != null) return 0;
+//        if(root == null) return 0;
+//        int res = 0;
+//        if(root == p || root == q) res++;
+//        res += countOfChild(root.left, p, q, target);
+//        res += countOfChild(root.right, p, q, target);
+//        if(target[0] == null && res == 2) target[0] = root;
+//        return res;
+//    }
 }

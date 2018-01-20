@@ -1,9 +1,5 @@
 package normal;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /*Given an integer, convert it to a roman numeral.
 
 Input is guaranteed to be within the range from 1 to 3999.

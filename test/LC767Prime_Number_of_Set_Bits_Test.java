@@ -10,12 +10,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import normal.LC767Prime_Number_of_Set_Bits;
+import normal.LC762_Prime_Number_of_Set_Bits;
 
 @RunWith(Parameterized.class)
 public class LC767Prime_Number_of_Set_Bits_Test {
 
-	private LC767Prime_Number_of_Set_Bits test; 
+	private LC762_Prime_Number_of_Set_Bits test; 
 	private int start, end, res;
 	
 	public LC767Prime_Number_of_Set_Bits_Test(int start, int end, int res){
@@ -27,7 +27,7 @@ public class LC767Prime_Number_of_Set_Bits_Test {
 	
 	@Before
 	public void setUp() throws Exception {
-		test = new LC767Prime_Number_of_Set_Bits();
+		test = new LC762_Prime_Number_of_Set_Bits();
 	}
 
 	@Parameterized.Parameters

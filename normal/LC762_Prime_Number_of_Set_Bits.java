@@ -32,7 +32,7 @@ Note:
 L, R will be integers L <= R in the range [1, 10^6].
 R - L will be at most 10000.
 */
-public class LC767Prime_Number_of_Set_Bits {
+public class LC762_Prime_Number_of_Set_Bits {
 	//Method 1: 暴力解 数每一个数的set of bits 看是不是素数
     public int countPrimeSetBits(int L, int R) {
         if(L>R) return 0;

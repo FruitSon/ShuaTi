@@ -30,7 +30,6 @@ The binary representation of 1 is 1 (no leading zero bits), and its complement i
 //	- 相与& (把取反之后前置的1111....1都置0)
 public class LC476_Number_Complement {
 	//Method 1: 逐位相加
-	//-	逐位 flip, sum all 2^i where num[i] == 0
     public int findComplement1(int num) {
         int res = 0, p = 1;
         while(num!=0){

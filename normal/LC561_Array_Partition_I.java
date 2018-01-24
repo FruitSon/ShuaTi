@@ -15,7 +15,7 @@ n is a positive integer, which is in the range of [1, 10000].
 All the integers in the array will be in the range of [-10000, 10000].
 */
 
-//in order to maximize the sum of min(ai,bi)
+//In order to maximize the sum of min(ai,bi)
 //just sort the array and return the sum of previous half of the array
 //Time: O(nlogn)
 //Space: O(1)

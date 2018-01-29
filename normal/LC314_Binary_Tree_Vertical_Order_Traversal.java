@@ -52,28 +52,15 @@ return its vertical order traversal as:
 ]
 */
 
+// Method 1: wrap class + level traverse ( pq)
+// Wrapper class to record the id of col it belongs to
+// Time: O(n)
+// Space: O(n)
 
+//can't use recursive as it reverese the order of value which are in the right subtree
 
 public class LC314_Binary_Tree_Vertical_Order_Traversal {
-//    public List<List<Integer>> verticalOrder(TreeNode root) {    
-//    	Map<Integer, List<Integer>> map = new TreeMap<>();
-//		inOrder(root, map, 0);
-//    	List<List<Integer>> res = new LinkedList<>();
-//    	for(List<Integer> list : map.values()) res.add(list);
-//    	return res;    	
-//    }
-//    
-//    private void inOrder(TreeNode root, Map<Integer, List<Integer>> map, int col){
-//    	if(root==null) return;
-//    	if(!map.containsKey(col)) map.put(col, new LinkedList<Integer>());
-//    	if(col > 0) map.get(col).add(root.val);
-//    	if(root.left!=null)  inOrder(root.left, map, col-1);
-//    	if(root.right!=null) inOrder(root.right, map, col+1);
-//    	return;
-//    }
-
-	
-	//LEVEL ORDER
+	// Method 1: LEVEL ORDER
 	public List<List<Integer>> verticalOrder(TreeNode root) {    
     	List<List<Integer>> res = new LinkedList<>();
     	if(root==null) return res;
@@ -93,6 +80,23 @@ public class LC314_Binary_Tree_Vertical_Order_Traversal {
     	for(List<Integer> list : map.values()) res.add(list);
     	return res;    
     }
+	
+//  public List<List<Integer>> verticalOrder(TreeNode root) {    
+//	Map<Integer, List<Integer>> map = new TreeMap<>();
+//	inOrder(root, map, 0);
+//	List<List<Integer>> res = new LinkedList<>();
+//	for(List<Integer> list : map.values()) res.add(list);
+//	return res;    	
+//}
+//
+//private void inOrder(TreeNode root, Map<Integer, List<Integer>> map, int col){
+//	if(root==null) return;
+//	if(!map.containsKey(col)) map.put(col, new LinkedList<Integer>());
+//	if(col > 0) map.get(col).add(root.val);
+//	if(root.left!=null)  inOrder(root.left, map, col-1);
+//	if(root.right!=null) inOrder(root.right, map, col+1);
+//	return;
+//}
 }
 
 class wrapNode {  

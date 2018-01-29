@@ -1,9 +1,5 @@
 package normal;
 
-import java.util.LinkedList;
-import java.util.List;
-import data_structure.TreeNode;
-
 /*
 Given n, how many structurally unique BST's (binary search trees) that store values 1...n?
 
@@ -15,7 +11,7 @@ Given n = 3, there are a total of 5 unique BST's.
      3     2     1      1   3      2
     /     /       \                 \
    2     1         2                 3
- */
+*/
 
 public class LC096_Unique_Binary_Search_Trees {
 

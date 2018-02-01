@@ -16,15 +16,23 @@ Input: 21
 Output: -1
 */
 
+/*
+556	Next Greater Element III 
+503	Next Greater Element II
+496	Next Greater Element I 
+*/
+
+// corner case: nextGreaterElement不在Integer范围内
+// 1999999999
+// Exception in thread "main" java.lang.NumberFormatException: For input string: "9199999999"
+
 public class LC556_Next_Greater_Element_III {
     //比这一位大的最小值
     //sort 剩余的数字  
-	//1999999999
-    //Exception in thread "main" java.lang.NumberFormatException: For input string: "9199999999"
     public int nextGreaterElement(int n) {
 
         char[] num = String.valueOf(n).toCharArray();
-        int[] idx = new int[10];
+        int[] idx = new int[10]; //map
         Arrays.fill(idx,-1);
 
         for(int i = num.length-1; i >=0 ; i --){
